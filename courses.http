@@ -1,0 +1,30 @@
+### List courses
+GET http://localhost:8080/api/courses
+
+### Create a course; copy the returned id into the requests below
+POST http://localhost:8080/api/courses
+Content-Type: application/json
+
+{
+  "name": "Spring Boot REST Basics",
+  "description": "Learn controllers, HTTP methods, and JSON storage",
+  "target_date": "2026-12-31",
+  "status": "Not Started"
+}
+
+### Get a course
+GET http://localhost:8080/api/courses/{{courseId}}
+
+### Replace all editable fields
+PUT http://localhost:8080/api/courses/{{courseId}}
+Content-Type: application/json
+
+{
+  "name": "Spring Boot REST Basics",
+  "description": "Practice CRUD endpoints",
+  "target_date": "2026-12-31",
+  "status": "In Progress"
+}
+
+### Delete a course
+DELETE http://localhost:8080/api/courses/{{courseId}}
